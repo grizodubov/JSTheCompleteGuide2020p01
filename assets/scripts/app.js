@@ -1,8 +1,11 @@
 const dafaultResult = 0
 let currentResult = dafaultResult;
+// let calculationDescription;
 
-currentResult = currentResult + 10;
+function add(){
+    currentResult = currentResult + userInput.value;
+ //   calculationDescription = `${dafaultResult} + ${userInput.value}`;
+    outputResult(currentResult, '');
+}
 
-let calculationDescription = `${dafaultResult} + 10`;
-
-outputResult(currentResult, calculationDescription);
+addBtn.addEventListener('click', add)
