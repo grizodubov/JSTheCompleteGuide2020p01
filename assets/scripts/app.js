@@ -1,11 +1,15 @@
-const dafaultResult = 0
+const dafaultResult = 0;
 let currentResult = dafaultResult;
-// let calculationDescription;
 
-function add(){
-    currentResult = currentResult + userInput.value;
- //   calculationDescription = `${dafaultResult} + ${userInput.value}`;
-    outputResult(currentResult, '');
+function getUserNumberInput(){
+    return parseInt(userInput.value);
 }
 
-addBtn.addEventListener('click', add)
+function add() {
+  const enteredNumber = getUserNumberInput();
+  const calcDescriptions = `${currentResult} + ${enteredNumber}`;
+  currentResult = currentResult + enteredNumber;
+  outputResult(currentResult, calcDescriptions);
+}
+
+addBtn.addEventListener("click", add);
